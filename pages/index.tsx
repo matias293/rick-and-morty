@@ -1,9 +1,7 @@
 import { Grid } from '@mui/material'
-import { style } from '@mui/system'
-import Head from 'next/head'
-import Image from 'next/image'
 import ActionAreaCard from '../components/Cards/Cards'
 import ResponsiveAppBar from '../components/Navbar/Navbar'
+import SimpleSlider from '../components/Slider/Slider'
 import styles from '../styles/Home.module.css'
 
 const characters = [
@@ -44,12 +42,42 @@ const characters = [
    
 },
 ]
+interface HeroProp  {
+    id: number;
+    src: string
+    alt: string
+  }
+const heroPictures= [
+  {
+    id: 1,
+    src: 'https://res.cloudinary.com/dlgubtb0g/image/upload/v1670080372/rick-morty/rick_ron1jn.jpg',
+    alt: "Hero rick"
+  },
+  {
+    id: 2,
+    src: 'https://res.cloudinary.com/dlgubtb0g/image/upload/v1670080372/rick-morty/rick-y-morty-como-breaking-bad-5441_jhadgb.jpg',
+    alt: "Hero rick bd"
+  },
+  {
+    id: 3,
+    src: 'https://res.cloudinary.com/dlgubtb0g/image/upload/v1670080372/rick-morty/54045-rick-and-morty-cartoons-tv-shows-hd-rick-morty-animated-tv-series_c1tzku.jpg',
+    alt: "Hero ricasdk"
+  },
+  {
+    id: 4,
+    src: 'https://res.cloudinary.com/dlgubtb0g/image/upload/v1670080373/rick-morty/rick-and-morty-en-nave_3840x2400_xtrafondos.com_qetv3l.jpg',
+    alt: "Heasf"
+  }
+]
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <ResponsiveAppBar/>
       <div>
+      <SimpleSlider images={heroPictures}/>
+      </div>
+      <div className={styles.containerCard}>
       <Grid container spacing={3}>
         {
           characters.map((char) =>(

@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: black;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -21,6 +22,11 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background:darkblue
   }
+}
+img{
+  max-width:850px;
+  max-height:650px;
+  text-align: center
 }

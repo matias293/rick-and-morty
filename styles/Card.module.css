@@ -3,4 +3,10 @@
   margin: "1em";
   box-sizing: border-box;
 }
+.container{
+  text-align: center;
+  margin: 50px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
 

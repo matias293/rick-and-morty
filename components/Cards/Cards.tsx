@@ -14,6 +14,7 @@ type CharacterProp = {
 
 const ActionAreaCard: React.FC<CharacterProp> = ({image, name})=> {
   return (
+    <div className={styles.container}>
     <Card className={styles.item} sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
@@ -32,6 +33,7 @@ const ActionAreaCard: React.FC<CharacterProp> = ({image, name})=> {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   );
 }
 
